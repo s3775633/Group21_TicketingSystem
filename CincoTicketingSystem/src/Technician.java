@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// Class used to create a technician within the system
 public class Technician {
 	private String name;
 	private int level;
@@ -7,6 +8,7 @@ public class Technician {
 	private String password;
 	private ArrayList<Ticket> tickets;
 	
+	// Constructor
 	public Technician(String name, int level, String username, String password)
 	{
 		this.name = name;
@@ -16,6 +18,7 @@ public class Technician {
 		this.tickets = new ArrayList<Ticket>();
 	}
 	
+	// Getters
 	public String getName()
 	{
 		return name;
@@ -41,6 +44,7 @@ public class Technician {
 		return tickets;
 	}
 	
+	// Setter
 	public void setPassword(String password)
 	{
 		this.password = password;
