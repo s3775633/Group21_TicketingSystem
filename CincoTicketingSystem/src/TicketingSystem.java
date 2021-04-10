@@ -125,7 +125,7 @@ public class TicketingSystem {
 			System.out.println("Please enter your password: ");
 			String password = input.nextLine();
 			//Login Attempt for T1
-			// Foreach loop used to iterate through each technician
+			// For each loop used to iterate through each technician
 			for(Technician technician : ts.getTechnicians())
 			{
 				if(technician.getUsername().contentEquals(username)) {
@@ -135,40 +135,7 @@ public class TicketingSystem {
 					}
 				}
 			}
-			if(t1.getUsername().contentEquals(username)) {
-				if(t1.getPassword().contentEquals(password)) {
-					System.out.println("Login Succesful");
-					success = true;
-				}
-			}
-			//Login Attempt for T2
-			else if(t2.getUsername().contentEquals(username)) {
-				if(t2.getPassword().contentEquals(password)) {
-					System.out.println("Login Successful");
-					success = true;
-				}
-			}
-			//Login Attempt for T3
-			else if(t3.getUsername().contentEquals(username)) {
-				if(t3.getPassword().contentEquals(password)) {
-					System.out.println("Login Successful");
-					success = true;
-				}
-			}
-			//Login Attempt for T4
-			else if(t4.getUsername().contentEquals(username)) {
-				if(t4.getPassword().contentEquals(password)) {
-					System.out.println("Login Successful");
-					success = true;
-				}
-			}
-			//Login Attempt for T5
-			else if(t5.getUsername().contentEquals(username)) {
-				if(t5.getPassword().contentEquals(password)) {
-					System.out.println("Login Successful");
-					success = true;
-				}
-			}
+			
 			if(success == false) {
 				System.out.println("Invalid Login");
 			}
