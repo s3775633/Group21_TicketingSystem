@@ -125,6 +125,16 @@ public class TicketingSystem {
 			System.out.println("Please enter your password: ");
 			String password = input.nextLine();
 			//Login Attempt for T1
+			// Foreach loop used to iterate through each technician
+			for(Technician technician : ts.getTechnicians())
+			{
+				if(technician.getUsername().contentEquals(username)) {
+					if(technician.getPassword().contentEquals(password)) {
+						System.out.println("Login Succesful");
+						success = true;
+					}
+				}
+			}
 			if(t1.getUsername().contentEquals(username)) {
 				if(t1.getPassword().contentEquals(password)) {
 					System.out.println("Login Succesful");
